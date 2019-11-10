@@ -1,6 +1,6 @@
 {
   "name": "@sker65/deepstream.io-oauth-plugins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin that allows to authenticate with deepstream.io using oauth tokens ",
   "main": "src/openid-authentication.ts",
   "scripts": {
