@@ -1,0 +1,4 @@
+permission:
+    path: './permission/token-permission'
+    options:
+        clientId: "foo"

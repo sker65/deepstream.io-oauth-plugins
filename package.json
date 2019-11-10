@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "@deepstream/protobuf": "^1.0.1",
+    "@deepstream/server": "^5.0.4",
     "@deepstream/types": "^2.0.7",
     "@types/keycloak-connect": "^4.5.1",
+    "@types/route-parser": "^0.1.3",
     "ajv": "^6.10.2",
     "better-ajv-errors": "^0.6.7",
     "body-parser": "^1.19.0",
