@@ -1,0 +1,73 @@
+{
+  "name": "@sker65/deepstream.io-oauth-plugins",
+  "version": "1.0.0",
+  "description": "Plugin that allows to authenticate with deepstream.io using oauth tokens ",
+  "main": "src/openid-authentication.ts",
+  "scripts": {
+    "test": "echo 'no tests so far'"
+  },
+  "dependencies": {
+    "@deepstream/protobuf": "^1.0.1",
+    "@deepstream/types": "^2.0.7",
+    "@types/keycloak-connect": "^4.5.1",
+    "ajv": "^6.10.2",
+    "better-ajv-errors": "^0.6.7",
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "route-parser": "0.0.5",
+    "source-map-support": "^0.5.16",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v16.1.0",
+    "uuid": "^3.3.3",
+    "ws": "^7.2.0"
+  },
+  "devDependencies": {
+    "@deepstream/client": "^5.0.4",
+    "@types/adm-zip": "^0.4.32",
+    "@types/body-parser": "^1.17.1",
+    "@types/content-type": "^1.1.3",
+    "@types/cucumber": "^4.0.7",
+    "@types/js-yaml": "^3.12.1",
+    "@types/mkdirp": "^0.5.2",
+    "@types/mocha": "^5.2.7",
+    "@types/needle": "^2.0.4",
+    "@types/node": "^12.12.5",
+    "@types/pino": "^5.8.13",
+    "@types/sinon": "^7.5.0",
+    "@types/sinon-chai": "^3.2.3",
+    "@types/uuid": "^3.4.6",
+    "@types/ws": "^6.0.3",
+    "async": "^3.1.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
+    "cucumber": "^5.0.2",
+    "deepstream.io-client-js": "^2.3.4",
+    "husky": "^3.0.9",
+    "mocha": "^6.2.2",
+    "n0p3": "^1.0.2",
+    "nexe": "^3.3.2",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "ts-essentials": "^3.0.4",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "watch": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sker65/deepstream.io-oauth-plugins.git"
+  },
+  "keywords": [
+    "deepstream.io",
+    "oauth",
+    "openid",
+    "authentication",
+    "permission"
+  ],
+  "author": "Stefan Rinke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sker65/deepstream.io-oauth-plugins/issues"
+  },
+  "homepage": "https://github.com/sker65/deepstream.io-oauth-plugins#readme"
+}
