@@ -19,3 +19,31 @@ client.login({ token: tok }).then(() => {
 ```
 The bearer token gets validated against the configured issuer e.g. a keycloak server using the keycloak-connect module.
 If token is valid, token contents (roles etc ...) are made available as "server data" for later use in permission evaluation based on token roles / username etc..
+
+## permission checks
+
+The TokenPermission plugin uses the jwt token that was validated in the auth plugin to apply arbitrary permission constraints based on token content be it username or typically roles.
+
+To check if a subscription on a certain topic is allowed you would do something like:
+``` javascript
+    canPerformAction(socketWrapper: SocketWrapper, message: Message, callback: PermissionCallback, passItOn: any): void {
+
+        const serverData = socketWrapper.serverData;
+
+        const token = serverData ? JSON.parse(serverData.grant as string) : '';
+        let errorMsg: string = "Permission not granted";
+        if (message.topic === TOPIC.EVENT && message.action === EVENT_ACTION.SUBSCRIBE) {
+            const channel = message.name;
+            const route = new Route("projects/:project/*s");
+            const m = channel ? route.match(channel) : false;
+            if (m && this.hasRealmRole(token, `${m.project}-subscriber`)) {
+                this.logger.info(EVENT.INFO, `subscription to ${channel} granted`);
+                callback(socketWrapper, message, passItOn, null, true);
+                return;
+            }
+        }
+    }
+```
+
+But this is just ony example. You could also limit access to records in a simpler way.
+You also use the token lifecycle to force reauthenticate with deepstream (or terminate the session).
