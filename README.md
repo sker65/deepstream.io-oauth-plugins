@@ -1,4 +1,20 @@
-# Authentication with openid
+# Authentication / Authorization with openid / oauth
+
+This plugin is meant to enable oauth style authentication with deepstream.io when using deepstream from a web app.
+Web apps are most of the time authenicated using oauth / openidc with auth providers like auth0, google and others.
+You can also use your own oauth provider by running keycloak an excellent implementation for managing identity / 
+authenication and authorization.
+
+I created these plugins to adapt oauth style authentication / authorization to deepstream as well. With this two 
+plugins in place you basically can apply the same kind of identity / authentication / access control as your are used to with openid.
+
+The permission plugin can be considered as a "mapper" between grants in the token and permissions in deepstream.
+
+For now it is done in code and touches only one example permission (subscribing), but it can be extended easily.
+One could also for a mapper that can be configured with json or yml, but I prefer doing it in code anyway as it is more
+flexible and better testable.
+
+## example
 
 This example uses openid as authentication method. As in rest requests the client provides the whole authentication header from browser context as 'authData' like
 
